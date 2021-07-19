@@ -5,10 +5,11 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 
-import catLogo from "../../images/cat.jpeg";
 import WithPage from "../../hocs/WithPage";
-import CV from "../../assets/Resume_Ben_Jianhui_Shi.pdf";
 import { RootContext, IInitialState } from "../../context/RootContext";
+
+import catLogo from "../../assets/images/cat.jpeg";
+import CV from "../../assets/pdfs/Resume_Ben_Jianhui_Shi.pdf";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

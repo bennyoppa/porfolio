@@ -4,7 +4,7 @@ import Drawer from "@material-ui/core/Drawer";
 import Button from "@material-ui/core/Button";
 
 import { links } from "../../constants/index";
-import welcomeLogo from "../../images/welcome.jpeg";
+import welcomeLogo from "../../assets/images/welcome.jpeg";
 
 const useStyles = makeStyles({
   paperAnchorRight: {

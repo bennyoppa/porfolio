@@ -11,9 +11,9 @@ interface IPageProps extends WithStyles<typeof styles> {}
 const styles = (theme: Theme) =>
   createStyles({
     pageContainer: {
-      padding: "40px 70px 60px",
+      padding: "40px 70px",
       [theme.breakpoints.down("sm")]: {
-        padding: "5px 20px 10px",
+        padding: "20px 35px",
       },
     },
   });
