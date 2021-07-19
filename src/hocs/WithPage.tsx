@@ -1,21 +1,43 @@
-import React from "react";
+import React, { Component } from "react";
+import {
+  withStyles,
+  Theme,
+  WithStyles,
+  createStyles,
+} from "@material-ui/core/styles";
 
-import "./WithPage.scss";
+interface IPageProps extends WithStyles<typeof styles> {}
 
-interface IPageProps {}
+const styles = (theme: Theme) =>
+  createStyles({
+    pageContainer: {
+      padding: "40px 70px 60px",
+      [theme.breakpoints.down("sm")]: {
+        padding: "5px 20px 10px",
+      },
+    },
+  });
 
-const WithPage = <P extends object>(WrappedComponent: React.ComponentType<P>) =>
-  class Page extends React.Component<P & IPageProps> {
-    render() {
-      const { ...props } = this.props;
-      return (
-        <div className="page">
-          <div className="page-container">
-            <WrappedComponent {...(props as P)} />
+const WithPage = <P extends object>(
+  WrappedComponent: React.ComponentType<P>
+) => {
+  const Page = withStyles(styles)(
+    class extends Component<IPageProps> {
+      render() {
+        const { classes, ...props } = this.props;
+
+        return (
+          <div className="page">
+            <div className={classes.pageContainer}>
+              <WrappedComponent {...(props as P)} />
+            </div>
           </div>
-        </div>
-      );
+        );
+      }
     }
-  };
+  );
+
+  return Page;
+};
 
 export default WithPage;

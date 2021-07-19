@@ -7,8 +7,7 @@ import Button from "@material-ui/core/Button";
 
 import catLogo from "../../images/cat.jpeg";
 import WithPage from "../../hocs/WithPage";
-
-import "./About.scss";
+import CV from "../../assets/Resume_Ben_Jianhui_Shi.pdf";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -34,10 +33,20 @@ const useStyles = makeStyles((theme: Theme) =>
 const About = () => {
   const classes = useStyles();
 
+  const downloadCVHandler = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    window.open(CV);
+  };
+
   return (
     <div>
       <section className="about-me-section">
-        <Grid container justify="space-between" alignItems="center" spacing={2}>
+        <Grid
+          container
+          justifyContent="space-between"
+          alignItems="center"
+          spacing={2}
+        >
           <Grid item xs={12} sm={6} lg={5} className="about-me-section__avatar">
             <Avatar className={classes.avatar} alt="Me" src={catLogo} />
           </Grid>
@@ -61,10 +70,12 @@ const About = () => {
               variant="outlined"
               color="primary"
               classes={{ root: classes.cvButton }}
+              onClick={downloadCVHandler}
             >
               Download CV
             </Button>
             <Button
+              href="mailto:benny.j.shi@gmail.com"
               variant="outlined"
               classes={{ root: classes.contactButton }}
             >
