@@ -1,10 +1,10 @@
 import { PropTypes } from "@material-ui/core";
 
-export interface ILinks {
+export type ILinks = {
   name: string;
   url: string;
   color?: PropTypes.Color;
-}
+};
 
 const links: ILinks[] = [
   {

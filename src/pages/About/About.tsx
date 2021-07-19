@@ -8,6 +8,7 @@ import Button from "@material-ui/core/Button";
 import catLogo from "../../images/cat.jpeg";
 import WithPage from "../../hocs/WithPage";
 import CV from "../../assets/Resume_Ben_Jianhui_Shi.pdf";
+import { RootContext, IInitialState } from "../../context/RootContext";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -39,52 +40,66 @@ const About = () => {
   };
 
   return (
-    <div>
-      <section className="about-me-section">
-        <Grid
-          container
-          justifyContent="space-between"
-          alignItems="center"
-          spacing={2}
-        >
-          <Grid item xs={12} sm={6} lg={5} className="about-me-section__avatar">
-            <Avatar className={classes.avatar} alt="Me" src={catLogo} />
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            lg={7}
-            className="about-me-section__content"
-          >
-            <Typography variant="subtitle1" color="textSecondary">
-              Front-end Developer
-            </Typography>
-            <Typography variant="h4" gutterBottom={true}>
-              <b>Ben Shi</b>
-            </Typography>
-            <Typography variant="body1" paragraph={true}>
-              Hi, I'm a new and passionate front-end developer.
-            </Typography>
-            <Button
-              variant="outlined"
-              color="primary"
-              classes={{ root: classes.cvButton }}
-              onClick={downloadCVHandler}
-            >
-              Download CV
-            </Button>
-            <Button
-              href="mailto:benny.j.shi@gmail.com"
-              variant="outlined"
-              classes={{ root: classes.contactButton }}
-            >
-              Contact
-            </Button>
-          </Grid>
-        </Grid>
-      </section>
-    </div>
+    <RootContext.Consumer>
+      {(value: IInitialState) => {
+        const { title, name, bio } = value.data.pages.about;
+
+        return (
+          <div>
+            <section className="about-me-section">
+              <Grid
+                container
+                justifyContent="space-between"
+                alignItems="center"
+                spacing={2}
+              >
+                <Grid
+                  item
+                  xs={12}
+                  sm={6}
+                  lg={5}
+                  className="about-me-section__avatar"
+                >
+                  <Avatar className={classes.avatar} alt="Me" src={catLogo} />
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  sm={6}
+                  lg={7}
+                  className="about-me-section__content"
+                >
+                  <Typography variant="subtitle1" color="textSecondary">
+                    {title}
+                  </Typography>
+                  <Typography variant="h4" gutterBottom={true}>
+                    <b>{name}</b>
+                  </Typography>
+                  <Typography variant="body1" paragraph={true}>
+                    {bio}
+                  </Typography>
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    classes={{ root: classes.cvButton }}
+                    onClick={downloadCVHandler}
+                  >
+                    Download CV
+                  </Button>
+                  <Button
+                    href="mailto:benny.j.shi@gmail.com"
+                    variant="outlined"
+                    classes={{ root: classes.contactButton }}
+                  >
+                    Contact
+                  </Button>
+                </Grid>
+              </Grid>
+            </section>
+          </div>
+        );
+      }}
+    </RootContext.Consumer>
   );
 };
 
