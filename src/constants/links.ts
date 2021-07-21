@@ -8,13 +8,13 @@ export type ILinks = {
 
 const links: ILinks[] = [
   {
-    name: "Home",
+    name: "About",
     url: "/",
     color: "inherit",
   },
   {
-    name: "About",
-    url: "/about",
+    name: "Temp",
+    url: "/temp",
     color: "inherit",
   },
 ];
