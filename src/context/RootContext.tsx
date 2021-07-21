@@ -10,3 +10,5 @@ export interface IInitialState {
 export const initialState: IInitialState = { data };
 
 export const RootContext = createContext({} as IInitialState);
+
+RootContext.displayName = "RootContext";
