@@ -44,6 +44,7 @@ function NavBar(props: any) {
 
   const redirectPageHandler = (url: string) => {
     history.push({ pathname: url });
+    setOpenDrawer(false);
   };
 
   const drawerHandler = () => {

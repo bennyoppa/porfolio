@@ -1,23 +1,28 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Button from "@material-ui/core/Button";
 
 import { links } from "../../constants/index";
 import welcomeLogo from "../../assets/images/welcome.jpeg";
 
-const useStyles = makeStyles({
-  paperAnchorRight: {
-    width: 300,
-    backgroundColor: "#EBDDD8",
-  },
-  buttonRoot: {
-    backgroundColor: "#E5A1AA",
-    margin: 8,
-    color: "white",
-    width: 150,
-  },
-});
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    paperAnchorRight: {
+      width: "auto",
+      backgroundColor: "#EBDDD8",
+    },
+    buttonRoot: {
+      backgroundColor: "#E5A1AA",
+      margin: 8,
+      color: "white",
+      width: 150,
+    },
+    logo: {
+      height: "25vh",
+    },
+  })
+);
 
 function TempDrawer(props: any) {
   const { openDrawer, onDrawerOnClose, onRedirectPage } = props;
@@ -42,7 +47,7 @@ function TempDrawer(props: any) {
         open={openDrawer}
         onClose={onDrawerOnClose}
       >
-        <img src={welcomeLogo} alt={"Welcome Logo"} />
+        <img src={welcomeLogo} alt={"Welcome Logo"} className={classes.logo} />
         <div
           style={{
             display: "flex",
