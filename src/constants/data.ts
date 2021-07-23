@@ -10,6 +10,10 @@ export interface IData {
         whatIDoTitle: string;
         cards: { title: string; content: string; iconType: string }[];
       };
+      testimonials: {
+        testimonialsTitle: string;
+        imageCards: { title: string; subtitle: string; content: string }[];
+      };
     };
   };
 }
@@ -27,23 +31,47 @@ const data: IData = {
         cards: [
           {
             title: "Title1",
-            content: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            content:
+              "xxxxxxxxxx xxxxxxxxx xxxxxxxxxxxx xxxxxxxxx xxxxxxxx xxxxxxxxxxx xxxxx xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxx",
             iconType: "create",
           },
           {
             title: "Title2",
-            content: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            content:
+              "xxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxx",
             iconType: "store",
           },
           {
             title: "Title3",
-            content: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            content:
+              "xxxxxxxxxxxxx xxxxxxxxxxxxx xxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxx",
             iconType: "web",
           },
           {
             title: "Title4",
-            content: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            content:
+              "xxxxxxxx xxxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxxxxxxx xxxxxx xxxxxx xxxxxxxxxxx xxxxxxxxxx xxxxxxxxxxxxxxx",
             iconType: "business",
+          },
+        ],
+      },
+      testimonials: {
+        testimonialsTitle: "No Idea",
+        imageCards: [
+          {
+            title: "111",
+            subtitle: "xxx",
+            content: "xxxxxxxxxxxxxxx",
+          },
+          {
+            title: "222",
+            subtitle: "xxx",
+            content: "xxxxxxxxxxxxxxx",
+          },
+          {
+            title: "333",
+            subtitle: "xxx",
+            content: "xxxxxxxxxxxxxxx",
           },
         ],
       },

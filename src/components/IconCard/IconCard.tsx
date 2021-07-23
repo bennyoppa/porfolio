@@ -32,12 +32,12 @@ class IconCard extends Component<IIconCardProps> {
 
     return (
       <Grid container>
-        <Grid item xs={3}>
+        <Grid item xs={2}>
           <Grid container alignItems="flex-start" justifyContent="flex-end">
             {Icon && <Icon classes={{ root: classes.icon }} color="primary" />}
           </Grid>
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={10}>
           <Typography variant="h6" color="primary" gutterBottom={true}>
             <b>{title}</b>
           </Typography>
