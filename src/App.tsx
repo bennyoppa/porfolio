@@ -5,7 +5,8 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import NavBar from "./components/NavBar/NavBar";
 import Error from "./pages/Error/Error";
 import About from "./pages/About/About";
-import Temp from "./pages/Temp/Temp";
+import Resume from "./pages/Resume/Resume";
+import Contact from "./pages/Contact/Contact";
 
 import "./App.css";
 
@@ -38,8 +39,11 @@ function App() {
             <Route exact path="/">
               <About />
             </Route>
-            <Route exact path="/temp">
-              <Temp />
+            <Route exact path="/resume">
+              <Resume />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
             </Route>
             <Route path="*">
               <Error />
