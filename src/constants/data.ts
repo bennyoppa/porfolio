@@ -21,24 +21,15 @@ export interface IData {
     };
     resume: {
       heading: string;
-      education: {
-        eduTitle: string;
-        eduCards: {
+      eduExp: {
+        eduExpType: string;
+        cards: {
           year: string;
           location: string;
           title: string;
           description: string;
         }[];
-      };
-      experience: {
-        expTitle: string;
-        expCards: {
-          year: string;
-          location: string;
-          title: string;
-          description: string;
-        }[];
-      };
+      }[];
     };
   };
 }
@@ -133,55 +124,60 @@ const data: IData = {
     },
     resume: {
       heading: "Resume",
-      education: {
-        eduTitle: "Education",
-        eduCards: [
-          {
-            year: "2017 - 2018",
-            location: "University of New South Wales",
-            title: "Master of IT",
-            description:
-              "Major in Artificial Intelligence & Database Management Systems",
-          },
-          {
-            year: "2011 - 2015",
-            location: "University of New South Wales",
-            title: "Bachelor of Electrical Eng",
-            description:
-              "Major in microelectronics, energy systems, control system & signal processing",
-          },
-          {
-            year: "2000 - 2011",
-            location: "UNSW Global",
-            title: "Foundation Studies",
-            description:
-              "Foundation Studies is an alternative of Year 12 courses for international students",
-          },
-        ],
-      },
-      experience: {
-        expTitle: "Experience",
-        expCards: [
-          {
-            year: "",
-            location: "",
-            title: "",
-            description: "",
-          },
-          {
-            year: "",
-            location: "",
-            title: "",
-            description: "",
-          },
-          {
-            year: "",
-            location: "",
-            title: "",
-            description: "",
-          },
-        ],
-      },
+      eduExp: [
+        {
+          eduExpType: "Education",
+          cards: [
+            {
+              year: "2017 - 2018",
+              location: "University of New South Wales",
+              title: "Master of IT",
+              description:
+                "Major in Artificial Intelligence & Database Management Systems; other web dev and Chat-Bot projects.",
+            },
+            {
+              year: "2011 - 2015",
+              location: "University of New South Wales",
+              title: "Bachelor of Electrical Eng",
+              description:
+                "Major in microelectronics, energy systems, control system, programming & signal processing.",
+            },
+            {
+              year: "2000",
+              location: "UNSW Global",
+              title: "Foundation Studies",
+              description:
+                "Foundation Studies is an alternative of Year 12 courses for international students.",
+            },
+          ],
+        },
+        {
+          eduExpType: "Experience",
+          cards: [
+            {
+              year: "2021 - Now",
+              location: "Westpac",
+              title: "Data Analyst",
+              description:
+                "Utilised SAS programming and SQL for data analytics, BI reporting & data visualisation.",
+            },
+            {
+              year: "2019 - 2020",
+              location: "Telstra",
+              title: "Data Analyst",
+              description:
+                "Utilised Microsoft Azure Cloud with Spark & SQL to perform data transformation, modelling & warehousing.",
+            },
+            {
+              year: "2019",
+              location: "TPG",
+              title: "Graduate Systems Engineer",
+              description:
+                "Back-end developments & system monitoring by using PHP and Linus batch scripts.",
+            },
+          ],
+        },
+      ],
     },
   },
 };
