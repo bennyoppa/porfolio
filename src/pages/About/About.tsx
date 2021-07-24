@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
         right: 0,
         width: "100%",
         height: 2,
-        background: "grey",
+        background: "#f5f5f5",
       },
       "&:after": {
         position: "absolute",
