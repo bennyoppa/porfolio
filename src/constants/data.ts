@@ -10,8 +10,8 @@ export interface IData {
         whatIDoTitle: string;
         cards: { title: string; content: string; iconType: string }[];
       };
-      testimonials: {
-        testimonialsTitle: string;
+      favourites: {
+        favouritesTitle: string;
         imageCards: { title: string; subtitle: string; content: string }[];
       };
       funFacts: {
@@ -59,23 +59,28 @@ const data: IData = {
           },
         ],
       },
-      testimonials: {
-        testimonialsTitle: "Testimonials",
+      favourites: {
+        favouritesTitle: "Favourites",
         imageCards: [
           {
-            title: "111",
-            subtitle: "xxx",
-            content: "xxxxxxxxxxxxxxx",
+            title: "Avengers 4: Endgame",
+            subtitle: "Movie",
+            content: '"I am IRON MAN!"',
           },
           {
-            title: "222",
-            subtitle: "xxx",
-            content: "xxxxxxxxxxxxxxx",
+            title: "Basketball",
+            subtitle: "Sport",
+            content: "Kobe Bryant - The Legend",
           },
           {
-            title: "333",
-            subtitle: "xxx",
-            content: "xxxxxxxxxxxxxxx",
+            title: "K-Pop",
+            subtitle: "Music",
+            content: '"Pretty Savage" by Black Pink',
+          },
+          {
+            title: "Anything",
+            subtitle: "Food",
+            content: '"Truffle Fried Rce", "Mango Gelato"',
           },
         ],
       },

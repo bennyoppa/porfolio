@@ -17,16 +17,26 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
     },
-    menuButton: {},
     title: {
       flexGrow: 1,
       color: "black",
     },
     toolBarRoot: {
       backgroundColor: "white",
+      height: 110,
+      borderRadius: 40,
+      border: "white",
     },
     appBar: {
       boxShadow: "none",
+      borderRadius: 40,
+      backgroundColor: "white",
+    },
+    button: {
+      color: "#333333",
+      "&:hover": {
+        backgroundColor: "rgba(600, 0, 0, 0.04)",
+      },
     },
   })
 );
@@ -41,7 +51,7 @@ function NavBar(props: any) {
       color={link.color}
       key={index}
       onClick={() => redirectPageHandler(link.url)}
-      style={{ color: "#333333" }}
+      classes={{ root: classes.button }}
     >
       {link.name}
     </Button>
@@ -67,7 +77,6 @@ function NavBar(props: any) {
           <Hidden smUp>
             <IconButton
               edge="start"
-              className={classes.menuButton}
               color="inherit"
               aria-label="menu"
               onClick={drawerHandler}

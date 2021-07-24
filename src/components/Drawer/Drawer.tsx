@@ -9,7 +9,7 @@ import welcomeLogo from "../../assets/images/welcome.jpeg";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     paperAnchorRight: {
-      width: "auto",
+      width: "70%",
       backgroundColor: "#EBDDD8",
     },
     buttonRoot: {

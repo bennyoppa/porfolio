@@ -78,7 +78,7 @@ const About = () => {
   const value = useContext(RootContext);
   const { title, name, bio } = value.data.pages.about.aboutMeSection;
   const { whatIDoTitle, cards } = value.data.pages.about.whatIDoSection;
-  const { testimonialsTitle, imageCards } = value.data.pages.about.testimonials;
+  const { favouritesTitle, imageCards } = value.data.pages.about.favourites;
   const { funFactsTitle, factCards } = value.data.pages.about.funFacts;
 
   const downloadCVHandler = (event: React.SyntheticEvent) => {
@@ -164,7 +164,7 @@ const About = () => {
         <Grid container>
           <Grid item xs={12}>
             <Typography variant="h5" className={classes.sectionTitle}>
-              <b>{testimonialsTitle}</b>
+              <b>{favouritesTitle}</b>
             </Typography>
           </Grid>
           <Grid item xs={12} className={classes.carousel}>

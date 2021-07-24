@@ -13,8 +13,13 @@ const links: ILinks[] = [
     color: "inherit",
   },
   {
-    name: "Temp",
-    url: "/temp",
+    name: "Resume",
+    url: "/resume",
+    color: "inherit",
+  },
+  {
+    name: "Contact",
+    url: "/contact",
     color: "inherit",
   },
 ];

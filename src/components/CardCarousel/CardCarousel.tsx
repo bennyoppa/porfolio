@@ -1,15 +1,16 @@
 import React, { useRef, useState } from "react";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+
+import Icon from "../Icon/Icon";
 
 const useStyles = makeStyles(() =>
   createStyles({
     imageCardContainer: {
       marginLeft: 20,
-      paddingTop: 40,
+      paddingTop: 20,
       flexWrap: "nowrap",
       transitionDuration: "0.5s",
     },
@@ -20,12 +21,11 @@ const useStyles = makeStyles(() =>
       borderRadius: 8,
       border: "2px solid #e5e5e5",
     },
-    imageCardAvatar: {
+    iconWrapper: {
       position: "absolute",
-      width: 70,
-      height: 70,
-      left: -35,
-      top: -35,
+      left: -20,
+      top: -20,
+      backgroundColor: "white",
     },
     content: {
       margin: "0 0 10px",
@@ -91,12 +91,14 @@ export default function CardCarousel(props: ICardCarousel) {
         {cards.map((card, i) => (
           <Grid item xs={12} sm={6} className={classes.inner} ref={cardRef}>
             <Grid key={i} className={classes.imageCardContent}>
-              <Avatar className={classes.imageCardAvatar} />
+              <div className={classes.iconWrapper}>
+                <Icon label={card.subtitle} />
+              </div>
               <Typography variant="body1" className={classes.content}>
                 {card.content}
               </Typography>
               <Typography variant="subtitle1" className={classes.title}>
-                {card.title}
+                <b>{card.title}</b>
               </Typography>
               <Typography variant="subtitle2" className={classes.subtitle}>
                 {card.subtitle}
