@@ -19,6 +19,27 @@ export interface IData {
         factCards: { title: string; count: number; label: string }[];
       };
     };
+    resume: {
+      heading: string;
+      education: {
+        eduTitle: string;
+        eduCards: {
+          year: string;
+          location: string;
+          title: string;
+          description: string;
+        }[];
+      };
+      experience: {
+        expTitle: string;
+        expCards: {
+          year: string;
+          location: string;
+          title: string;
+          description: string;
+        }[];
+      };
+    };
   };
 }
 
@@ -106,6 +127,58 @@ const data: IData = {
             title: "bbb",
             count: 444,
             label: "coffee",
+          },
+        ],
+      },
+    },
+    resume: {
+      heading: "Resume",
+      education: {
+        eduTitle: "Education",
+        eduCards: [
+          {
+            year: "2017 - 2018",
+            location: "University of New South Wales",
+            title: "Master of IT",
+            description:
+              "Major in Artificial Intelligence & Database Management Systems",
+          },
+          {
+            year: "2011 - 2015",
+            location: "University of New South Wales",
+            title: "Bachelor of Electrical Eng",
+            description:
+              "Major in microelectronics, energy systems, control system & signal processing",
+          },
+          {
+            year: "2000 - 2011",
+            location: "UNSW Global",
+            title: "Foundation Studies",
+            description:
+              "Foundation Studies is an alternative of Year 12 courses for international students",
+          },
+        ],
+      },
+      experience: {
+        expTitle: "Experience",
+        expCards: [
+          {
+            year: "",
+            location: "",
+            title: "",
+            description: "",
+          },
+          {
+            year: "",
+            location: "",
+            title: "",
+            description: "",
+          },
+          {
+            year: "",
+            location: "",
+            title: "",
+            description: "",
           },
         ],
       },
