@@ -20,9 +20,13 @@ const useStyles = makeStyles((theme: Theme) =>
     menuButton: {},
     title: {
       flexGrow: 1,
+      color: "black",
     },
     toolBarRoot: {
-      backgroundColor: "#DC7F8E",
+      backgroundColor: "white",
+    },
+    appBar: {
+      boxShadow: "none",
     },
   })
 );
@@ -37,6 +41,7 @@ function NavBar(props: any) {
       color={link.color}
       key={index}
       onClick={() => redirectPageHandler(link.url)}
+      style={{ color: "#333333" }}
     >
       {link.name}
     </Button>
@@ -53,10 +58,10 @@ function NavBar(props: any) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" classes={{ root: classes.appBar }}>
         <Toolbar classes={{ root: classes.toolBarRoot }}>
           <Typography variant="h6" className={classes.title}>
-            Ben.Shi
+            <b>Ben</b> Shi
           </Typography>
           <Hidden xsDown>{menuButtons}</Hidden>
           <Hidden smUp>
@@ -66,6 +71,7 @@ function NavBar(props: any) {
               color="inherit"
               aria-label="menu"
               onClick={drawerHandler}
+              style={{ color: "#333333" }}
             >
               <MenuIcon />
             </IconButton>

@@ -14,6 +14,10 @@ export interface IData {
         testimonialsTitle: string;
         imageCards: { title: string; subtitle: string; content: string }[];
       };
+      funFacts: {
+        funFactsTitle: string;
+        factCards: { title: string; count: number; label: string }[];
+      };
     };
   };
 }
@@ -56,7 +60,7 @@ const data: IData = {
         ],
       },
       testimonials: {
-        testimonialsTitle: "No Idea",
+        testimonialsTitle: "Testimonials",
         imageCards: [
           {
             title: "111",
@@ -72,6 +76,31 @@ const data: IData = {
             title: "333",
             subtitle: "xxx",
             content: "xxxxxxxxxxxxxxx",
+          },
+        ],
+      },
+      funFacts: {
+        funFactsTitle: "Fun Facts",
+        factCards: [
+          {
+            title: "xxx",
+            count: 111,
+            label: "heart",
+          },
+          {
+            title: "yyy",
+            count: 222,
+            label: "time",
+          },
+          {
+            title: "zzz",
+            count: 333,
+            label: "star",
+          },
+          {
+            title: "bbb",
+            count: 444,
+            label: "coffee",
           },
         ],
       },

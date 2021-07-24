@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import {
-  withStyles,
-  Theme,
-  WithStyles,
-  createStyles,
-} from "@material-ui/core/styles";
+import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
+import { WithStyles } from "@material-ui/core/styles";
 
 interface IPageProps extends WithStyles<typeof styles> {}
 

@@ -9,6 +9,7 @@ import WithPage from "../../hocs/WithPage";
 import { RootContext } from "../../context/RootContext";
 import IconCard from "../../components/IconCard/IconCard";
 import CardCarousel from "../../components/CardCarousel/CardCarousel";
+import FunFactCard from "../../components/FunFactCard/FunFactCard";
 
 import catLogo from "../../assets/images/cat.jpeg";
 import CV from "../../assets/pdfs/Resume_Ben_Jianhui_Shi.pdf";
@@ -27,14 +28,13 @@ const useStyles = makeStyles((theme: Theme) =>
     cvButton: {
       marginRight: theme.spacing(2),
       borderRadius: 24,
+      borderColor: "#007ced",
+      color: "black",
     },
     contactButton: {
       borderRadius: 24,
     },
-    whatIDoSection: {
-      paddingTop: 50,
-    },
-    whatIDoTitle: {
+    sectionTitle: {
       display: "inline-block",
       position: "relative",
       "&:before": {
@@ -55,16 +55,21 @@ const useStyles = makeStyles((theme: Theme) =>
         right: 0,
         width: "30%",
         height: 2,
-        background: "blue",
+        background: "#007ced",
       },
     },
-    testimonialsSection: {
-      paddingTop: 40,
+    sectionTop: {
+      paddingTop: 50,
     },
     cards: {
       paddingTop: 20,
     },
-    carouselTitle: {},
+    carousel: {
+      overflow: "hidden",
+    },
+    funFactCard: {
+      margin: 0,
+    },
   })
 );
 
@@ -74,6 +79,7 @@ const About = () => {
   const { title, name, bio } = value.data.pages.about.aboutMeSection;
   const { whatIDoTitle, cards } = value.data.pages.about.whatIDoSection;
   const { testimonialsTitle, imageCards } = value.data.pages.about.testimonials;
+  const { funFactsTitle, factCards } = value.data.pages.about.funFacts;
 
   const downloadCVHandler = (event: React.SyntheticEvent) => {
     event.preventDefault();
@@ -99,13 +105,21 @@ const About = () => {
             lg={7}
             className="about-me-section__content"
           >
-            <Typography variant="subtitle1" color="textSecondary">
+            <Typography variant="subtitle1" style={{ color: "#aaaaaa" }}>
               {title}
             </Typography>
-            <Typography variant="h5" gutterBottom={true}>
+            <Typography
+              variant="h5"
+              style={{ color: "#333333" }}
+              gutterBottom={true}
+            >
               <b>{name}</b>
             </Typography>
-            <Typography variant="body1" paragraph={true}>
+            <Typography
+              variant="body1"
+              style={{ color: "#666666" }}
+              paragraph={true}
+            >
               {bio}
             </Typography>
             <Button
@@ -126,11 +140,11 @@ const About = () => {
           </Grid>
         </Grid>
       </section>
-      <section className={classes.whatIDoSection}>
+      <section className={classes.sectionTop}>
         <Grid container>
           <Grid item xs={12}>
-            <Typography variant="h5" className={classes.whatIDoTitle}>
-              {whatIDoTitle}
+            <Typography variant="h5" className={classes.sectionTitle}>
+              <b>{whatIDoTitle}</b>
             </Typography>
           </Grid>
           <Grid container className={classes.cards}>
@@ -146,14 +160,32 @@ const About = () => {
           </Grid>
         </Grid>
       </section>
-      <section className={classes.testimonialsSection}>
+      <section className={classes.sectionTop}>
         <Grid container>
           <Grid item xs={12}>
-            <Typography variant="h5" className={classes.carouselTitle}>
-              {testimonialsTitle}
+            <Typography variant="h5" className={classes.sectionTitle}>
+              <b>{testimonialsTitle}</b>
             </Typography>
           </Grid>
-          <CardCarousel cards={imageCards} />
+          <Grid item xs={12} className={classes.carousel}>
+            <CardCarousel cards={imageCards} />
+          </Grid>
+        </Grid>
+      </section>
+      <section className={classes.sectionTop}>
+        <Grid container>
+          <Grid item xs={12}>
+            <Typography variant="h5" className={classes.sectionTitle}>
+              <b>{funFactsTitle}</b>
+            </Typography>
+          </Grid>
+          <Grid container>
+            {factCards.map((card, i) => (
+              <Grid xs={12} sm={6} md={3} item className={classes.funFactCard}>
+                <FunFactCard card={card} key={i} />
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
       </section>
     </div>

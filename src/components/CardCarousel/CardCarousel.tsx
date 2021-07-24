@@ -8,6 +8,7 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles(() =>
   createStyles({
     imageCardContainer: {
+      marginLeft: 20,
       paddingTop: 40,
       flexWrap: "nowrap",
       transitionDuration: "0.5s",
@@ -88,8 +89,8 @@ export default function CardCarousel(props: ICardCarousel) {
         style={{ transform: `translateX(${translateX})` }}
       >
         {cards.map((card, i) => (
-          <Grid item xs={12} sm={6} className={classes.inner}>
-            <Grid key={i} className={classes.imageCardContent} ref={cardRef}>
+          <Grid item xs={12} sm={6} className={classes.inner} ref={cardRef}>
+            <Grid key={i} className={classes.imageCardContent}>
               <Avatar className={classes.imageCardAvatar} />
               <Typography variant="body1" className={classes.content}>
                 {card.content}

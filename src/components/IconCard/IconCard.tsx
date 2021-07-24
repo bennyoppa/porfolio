@@ -12,9 +12,11 @@ const styles = (theme: Theme) =>
       width: 44,
       height: 44,
       marginRight: theme.spacing(2),
+      color: "#007ced",
     },
     cardContent: {
       wordBreak: "break-all",
+      paddingRight: 15,
     },
   });
 
@@ -34,11 +36,15 @@ class IconCard extends Component<IIconCardProps> {
       <Grid container>
         <Grid item xs={2}>
           <Grid container alignItems="flex-start" justifyContent="flex-end">
-            {Icon && <Icon classes={{ root: classes.icon }} color="primary" />}
+            {Icon && <Icon classes={{ root: classes.icon }} />}
           </Grid>
         </Grid>
         <Grid item xs={10}>
-          <Typography variant="h6" color="primary" gutterBottom={true}>
+          <Typography
+            variant="h6"
+            style={{ color: "#007ced" }}
+            gutterBottom={true}
+          >
             <b>{title}</b>
           </Typography>
           <Typography
