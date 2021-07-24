@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
       boxShadow: "none",
       borderRadius: 40,
       backgroundColor: "white",
+      padding: "0 20px",
     },
     button: {
       color: "#333333",
