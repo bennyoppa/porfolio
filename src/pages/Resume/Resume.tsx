@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import WithPage from "../../hocs/WithPage";
 import { RootContext } from "../../context/RootContext";
 import EduExpCard from "../../components/EduExpCard/EduExpCard";
+import CertCard from "../../components/CertCard/CertCard";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
     eduExpSection: {
       paddingTop: 70,
     },
-    eduExpTitle: {
+    sectionTitle: {
       display: "inline-block",
       position: "relative",
       "&:before": {
@@ -42,8 +43,11 @@ const useStyles = makeStyles((theme: Theme) =>
         background: "#007ced",
       },
     },
-    eduExpCards: {
+    cardGroup: {
       paddingTop: 30,
+    },
+    certSection: {
+      paddingTop: 70,
     },
   })
 );
@@ -51,7 +55,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const Resume = () => {
   const classes = useStyles();
   const value = useContext(RootContext);
-  const { heading, eduExp } = value.data.pages.resume;
+  const { heading, eduExp, certs } = value.data.pages.resume;
 
   return (
     <div>
@@ -64,10 +68,10 @@ const Resume = () => {
         <Grid container>
           {eduExp.map((e, i) => (
             <Grid item xs={6} key={i}>
-              <Typography variant="h5" className={classes.eduExpTitle}>
+              <Typography variant="h5" className={classes.sectionTitle}>
                 <b>{e.eduExpType}</b>
               </Typography>
-              <Grid container className={classes.eduExpCards}>
+              <Grid container className={classes.cardGroup}>
                 {e.cards.map((card, i) => (
                   <Grid item xs={12} key={i}>
                     <EduExpCard card={card} />
@@ -76,6 +80,22 @@ const Resume = () => {
               </Grid>
             </Grid>
           ))}
+        </Grid>
+      </section>
+      <section className={classes.certSection}>
+        <Grid container>
+          <Grid item xs={12}>
+            <Typography variant="h5" className={classes.sectionTitle}>
+              {certs.certTitle}
+            </Typography>
+          </Grid>
+          <Grid container className={classes.cardGroup}>
+            {certs.certCards.map((card, i) => (
+              <Grid item xs={6} key={i}>
+                <CertCard card={card} />
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
       </section>
     </div>

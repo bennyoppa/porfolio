@@ -30,6 +30,16 @@ export interface IData {
           description: string;
         }[];
       }[];
+      certs: {
+        certTitle: string;
+        certCards: {
+          name: string;
+          membershipId: string;
+          expiryDate: string;
+          img: string;
+          url: string;
+        }[];
+      };
     };
   };
 }
@@ -178,6 +188,25 @@ const data: IData = {
           ],
         },
       ],
+      certs: {
+        certTitle: "Certificates",
+        certCards: [
+          {
+            name: "Azure Data Engineer",
+            membershipId: "Certification number: H850-2946",
+            expiryDate: "11 June 2021",
+            img: "https://images.credly.com/size/680x680/images/61542181-0e8d-496c-a17c-3d4bf590eda1/azure-data-engineer-associate-600x600.png",
+            url: "https://www.credly.com/badges/3fed877d-b85f-4514-8e0c-ae18e1a987e2",
+          },
+          {
+            name: "Azure Fundamentals",
+            membershipId: "Certification number: H372-8920",
+            expiryDate: "27 February 2020",
+            img: "https://images.credly.com/size/680x680/images/70eb1e3f-d4de-4377-a062-b20fb29594ea/azure-data-fundamentals-600x600.png",
+            url: "https://www.credly.com/badges/66d1c1b6-ee94-44fd-b844-c69a72047bb9",
+          },
+        ],
+      },
     },
   },
 };
