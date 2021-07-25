@@ -37,16 +37,16 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/">
-              <About />
+              <About pageHeading="About" />
             </Route>
             <Route exact path="/resume">
-              <Resume />
+              <Resume pageHeading="Resume" />
             </Route>
             <Route exact path="/contact">
-              <Contact />
+              <Contact pageHeading="Contact" />
             </Route>
             <Route path="*">
-              <Error />
+              <Error pageHeading="Error" />
             </Route>
           </Switch>
         </Router>

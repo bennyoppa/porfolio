@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
 import { WithStyles } from "@material-ui/core/styles";
 
-interface IPageProps extends WithStyles<typeof styles> {}
+interface IPageProps extends WithStyles<typeof styles> {
+  pageHeading: string;
+}
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -19,6 +21,10 @@ const WithPage = <P extends object>(
 ) => {
   const Page = withStyles(styles)(
     class extends Component<IPageProps> {
+      componentDidMount() {
+        document.title = `Ben Shi - ${this.props.pageHeading}`;
+      }
+
       render() {
         const { classes, ...props } = this.props;
 

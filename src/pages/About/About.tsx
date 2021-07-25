@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const About = () => {
+const About = (props: any) => {
   const classes = useStyles();
   const value = useContext(RootContext);
   const { title, name, bio } = value.data.pages.about.aboutMeSection;

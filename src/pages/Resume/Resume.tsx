@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Resume = () => {
+const Resume = (props: any) => {
   const classes = useStyles();
   const value = useContext(RootContext);
   const { heading, eduExp, certs, skills } = value.data.pages.resume;
