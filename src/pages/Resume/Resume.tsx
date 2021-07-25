@@ -7,6 +7,7 @@ import WithPage from "../../hocs/WithPage";
 import { RootContext } from "../../context/RootContext";
 import EduExpCard from "../../components/EduExpCard/EduExpCard";
 import CertCard from "../../components/CertCard/CertCard";
+import SkillCard from "../../components/SkillCard/SkillCard";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -49,13 +50,19 @@ const useStyles = makeStyles((theme: Theme) =>
     certSection: {
       paddingTop: 70,
     },
+    skillSection: {
+      paddingTop: 70,
+    },
+    skillCards: {
+      padding: "30px 20px 0 0",
+    },
   })
 );
 
 const Resume = () => {
   const classes = useStyles();
   const value = useContext(RootContext);
-  const { heading, eduExp, certs } = value.data.pages.resume;
+  const { heading, eduExp, certs, skills } = value.data.pages.resume;
 
   return (
     <div>
@@ -96,6 +103,22 @@ const Resume = () => {
               </Grid>
             ))}
           </Grid>
+        </Grid>
+      </section>
+      <section className={classes.skillSection}>
+        <Grid container>
+          {skills.map((s, i) => (
+            <Grid item xs={6} key={i}>
+              <Typography variant="h5" className={classes.sectionTitle}>
+                {s.type}
+              </Typography>
+              <Grid container className={classes.skillCards}>
+                {s.skillList.map((skill, i) => (
+                  <SkillCard skill={skill} key={i} />
+                ))}
+              </Grid>
+            </Grid>
+          ))}
         </Grid>
       </section>
     </div>

@@ -40,6 +40,13 @@ export interface IData {
           url: string;
         }[];
       };
+      skills: {
+        type: string;
+        skillList: {
+          name: string;
+          percent: string;
+        }[];
+      }[];
     };
   };
 }
@@ -207,6 +214,50 @@ const data: IData = {
           },
         ],
       },
+      skills: [
+        {
+          type: "Coding Skills",
+          skillList: [
+            {
+              name: "JavaScript",
+              percent: "90%",
+            },
+            {
+              name: "ReactJS",
+              percent: "85%",
+            },
+            {
+              name: "HTML / CSS",
+              percent: "85%",
+            },
+            {
+              name: "Python",
+              percent: "90%",
+            },
+          ],
+        },
+        {
+          type: "Data Skills",
+          skillList: [
+            {
+              name: "SQL",
+              percent: "100%",
+            },
+            {
+              name: "NoSQL",
+              percent: "80%",
+            },
+            {
+              name: "Cloud Services",
+              percent: "80%",
+            },
+            {
+              name: "ETL",
+              percent: "70%",
+            },
+          ],
+        },
+      ],
     },
   },
 };
