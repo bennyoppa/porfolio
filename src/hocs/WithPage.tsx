@@ -14,7 +14,7 @@ const styles = (theme: Theme) =>
         padding: "20px 45px",
       },
       [theme.breakpoints.down("sm")]: {
-        padding: 20,
+        padding: 25,
       },
     },
   });

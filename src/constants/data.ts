@@ -278,7 +278,7 @@ const data: IData = {
           contactType: "phone",
         },
         { detail: "benny.j.shi@gmail.com", contactType: "email" },
-        { detail: "Rosebery NSW 2018", contactType: "address" },
+        { detail: "Sydney, Australia", contactType: "address" },
       ],
       shortcuts: [
         {

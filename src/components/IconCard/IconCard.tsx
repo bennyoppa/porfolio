@@ -9,8 +9,8 @@ import { icons } from "../../constants/index";
 const styles = (theme: Theme) =>
   createStyles({
     icon: {
-      width: 44,
-      height: 44,
+      width: 40,
+      height: 40,
       marginRight: theme.spacing(2),
       color: "#007ced",
     },
