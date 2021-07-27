@@ -1,13 +1,13 @@
 export interface IData {
   pages: {
     about: {
-      aboutMeSection: {
+      intro: {
         title: string;
         name: string;
         bio: string;
       };
-      whatIDoSection: {
-        whatIDoTitle: string;
+      aboutMeSection: {
+        aboutMeTitle: string;
         cards: { title: string; content: string; iconType: string }[];
       };
       favourites: {
@@ -48,24 +48,35 @@ export interface IData {
         }[];
       }[];
     };
+    contact: {
+      heading: string;
+      contactMethods: {
+        detail: string;
+        contactType: string;
+      }[];
+      shortcuts: {
+        url: string;
+        shortcutType: string;
+      }[];
+    };
   };
 }
 
 const data: IData = {
   pages: {
     about: {
-      aboutMeSection: {
+      intro: {
         title: "Front-end Developer",
         name: "Ben Shi",
         bio: "Hi, I'm a passionate Front-end Developer & Data Analyst.",
       },
-      whatIDoSection: {
-        whatIDoTitle: "What I do?",
+      aboutMeSection: {
+        aboutMeTitle: "About Me",
         cards: [
           {
             title: "Front-end Dev",
             content:
-              "I enjoy building interesting and interactive UI. Coding and web dev are two of my biggest hobbies to spend my spare time.",
+              "I enjoy building interesting and interactive UI. Coding and web dev are two of my biggest hobbies in my spare time.",
             iconType: "web",
           },
           {
@@ -83,7 +94,7 @@ const data: IData = {
           {
             title: "Food Addict",
             content:
-              "I cannot resist delicous food! Once lockdown is over, I'll start my hunting again.",
+              "I cannot resist delicous food and drinks! Once lockdown is over, I'll start my hunting again.",
             iconType: "food",
           },
         ],
@@ -256,6 +267,27 @@ const data: IData = {
               percent: "70%",
             },
           ],
+        },
+      ],
+    },
+    contact: {
+      heading: "Contact",
+      contactMethods: [
+        {
+          detail: "0452 660 217",
+          contactType: "phone",
+        },
+        { detail: "benny.j.shi@gmail.com", contactType: "email" },
+        { detail: "Rosebery NSW 2018", contactType: "address" },
+      ],
+      shortcuts: [
+        {
+          url: "https://www.linkedin.com/in/ben-jianhui-shi-97168ba9",
+          shortcutType: "linkedin",
+        },
+        {
+          url: "https://www.github.com/bennyoppa",
+          shortcutType: "github",
         },
       ],
     },

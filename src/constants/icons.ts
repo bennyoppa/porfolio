@@ -13,6 +13,11 @@ import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import FastfoodIcon from "@material-ui/icons/Fastfood";
 import FunctionsIcon from "@material-ui/icons/Functions";
 import TheatersIcon from "@material-ui/icons/Theaters";
+import PermPhoneMsgIcon from "@material-ui/icons/PermPhoneMsg";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 type Icons = {
   icon: (props: SvgIconProps) => JSX.Element;
@@ -75,6 +80,26 @@ const icons: Icons = [
   {
     icon: TheatersIcon,
     label: "theater",
+  },
+  {
+    icon: PermPhoneMsgIcon,
+    label: "phone",
+  },
+  {
+    icon: MailOutlineIcon,
+    label: "email",
+  },
+  {
+    icon: LocationOnIcon,
+    label: "address",
+  },
+  {
+    icon: LinkedInIcon,
+    label: "linkedin",
+  },
+  {
+    icon: GitHubIcon,
+    label: "github",
   },
 ];
 

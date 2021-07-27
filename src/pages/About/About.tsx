@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
@@ -97,8 +97,8 @@ const useStyles = makeStyles((theme: Theme) =>
 const About = (props: any) => {
   const classes = useStyles();
   const value = useContext(RootContext);
-  const { title, name, bio } = value.data.pages.about.aboutMeSection;
-  const { whatIDoTitle, cards } = value.data.pages.about.whatIDoSection;
+  const { title, name, bio } = value.data.pages.about.intro;
+  const { aboutMeTitle, cards } = value.data.pages.about.aboutMeSection;
   const { favouritesTitle, imageCards } = value.data.pages.about.favourites;
   const { funFactsTitle, factCards } = value.data.pages.about.funFacts;
 
@@ -108,15 +108,15 @@ const About = (props: any) => {
   };
 
   return (
-    <div>
-      <section className="about-me-section">
+    <Fragment>
+      <section className="intro-section">
         <Grid
           container
           justifyContent="space-between"
           alignItems="center"
           spacing={2}
         >
-          <Grid item xs={12} sm={6} lg={5} className="about-me-section__avatar">
+          <Grid item xs={12} sm={6} lg={5} className="intro-section__avatar">
             <Avatar className={classes.avatar} alt="Me" src={catLogo} />
           </Grid>
           <Grid
@@ -124,7 +124,7 @@ const About = (props: any) => {
             xs={12}
             sm={6}
             lg={7}
-            className="about-me-section__content"
+            className="intro-section__content"
             style={{ marginTop: 20 }}
           >
             <Typography variant="subtitle1" className={classes.title}>
@@ -166,7 +166,7 @@ const About = (props: any) => {
         <Grid container>
           <Grid item xs={12}>
             <Typography variant="h5" className={classes.sectionTitle}>
-              <b>{whatIDoTitle}</b>
+              <b>{aboutMeTitle}</b>
             </Typography>
           </Grid>
           <Grid container className={classes.cards}>
@@ -210,7 +210,7 @@ const About = (props: any) => {
           </Grid>
         </Grid>
       </section>
-    </div>
+    </Fragment>
   );
 };
 
