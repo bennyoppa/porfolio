@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import Hidden from "@material-ui/core/Hidden";
 
 import WithPage from "../../hocs/WithPage";
 import { RootContext } from "../../context/RootContext";
@@ -12,10 +13,13 @@ import SkillCard from "../../components/SkillCard/SkillCard";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     heading: {
-      padding: "65px 70px",
+      padding: "65px 0",
       backgroundColor: "#fcfcfc",
       borderTop: "2px solid #eee",
       borderBottom: "2px solid #eee",
+      [theme.breakpoints.down("sm")]: {
+        padding: "25px 0",
+      },
     },
     eduExpSection: {
       paddingTop: 20,
@@ -73,9 +77,16 @@ const Resume = (props: any) => {
   return (
     <div>
       <section className={classes.heading}>
-        <Typography variant="h3">
-          <b>{heading}</b>
-        </Typography>
+        <Hidden smDown>
+          <Typography variant="h3">
+            <b>{heading}</b>
+          </Typography>
+        </Hidden>
+        <Hidden smUp>
+          <Typography variant="h5">
+            <b>{heading}</b>
+          </Typography>
+        </Hidden>
       </section>
       <section className={classes.eduExpSection}>
         <Grid container>
