@@ -72,19 +72,19 @@ const data: IData = {
             title: "Data Analytics",
             content:
               "I'm a full-time Data Analyst specialising in data modelling, data warehouse, visualisation and cloud services. I also build predictive models with Python libraries in my side projects.",
-            iconType: "store",
+            iconType: "math",
           },
           {
             title: "Marvel Fan",
             content:
               "I'm a huge fan of Marvel movies and TV series. Infinity War and Endgame are my favourites, and I've watched them more than 5 times.",
-            iconType: "web",
+            iconType: "theater",
           },
           {
             title: "Food Addict",
             content:
               "I cannot resist delicous food! Once lockdown is over, I'll start my hunting again.",
-            iconType: "business",
+            iconType: "food",
           },
         ],
       },
@@ -109,7 +109,7 @@ const data: IData = {
           {
             title: "Anything",
             subtitle: "Food",
-            content: '"Truffle Fried Rce"',
+            content: '"Truffle Fried Rce", "Sushi"',
           },
         ],
       },

@@ -11,6 +11,8 @@ import VoiceChatIcon from "@material-ui/icons/VoiceChat";
 import SportsBasketballIcon from "@material-ui/icons/SportsBasketball";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import FastfoodIcon from "@material-ui/icons/Fastfood";
+import FunctionsIcon from "@material-ui/icons/Functions";
+import TheatersIcon from "@material-ui/icons/Theaters";
 
 type Icons = {
   icon: (props: SvgIconProps) => JSX.Element;
@@ -65,6 +67,14 @@ const icons: Icons = [
   {
     icon: FastfoodIcon,
     label: "food",
+  },
+  {
+    icon: FunctionsIcon,
+    label: "math",
+  },
+  {
+    icon: TheatersIcon,
+    label: "theater",
   },
 ];
 
