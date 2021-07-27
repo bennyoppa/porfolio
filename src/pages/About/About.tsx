@@ -203,8 +203,15 @@ const About = (props: any) => {
           </Grid>
           <Grid container>
             {factCards.map((card, i) => (
-              <Grid xs={12} sm={6} md={3} item className={classes.funFactCard}>
-                <FunFactCard card={card} key={i} />
+              <Grid
+                key={i}
+                xs={12}
+                sm={6}
+                md={3}
+                item
+                className={classes.funFactCard}
+              >
+                <FunFactCard card={card} />
               </Grid>
             ))}
           </Grid>

@@ -89,8 +89,15 @@ export default function CardCarousel(props: ICardCarousel) {
         style={{ transform: `translateX(${translateX})` }}
       >
         {cards.map((card, i) => (
-          <Grid item xs={12} sm={6} className={classes.inner} ref={cardRef}>
-            <Grid key={i} className={classes.imageCardContent}>
+          <Grid
+            key={i}
+            item
+            xs={12}
+            sm={6}
+            className={classes.inner}
+            ref={cardRef}
+          >
+            <div className={classes.imageCardContent}>
               <div className={classes.iconWrapper}>
                 <Icon label={card.subtitle} />
               </div>
@@ -103,7 +110,7 @@ export default function CardCarousel(props: ICardCarousel) {
               <Typography variant="subtitle2" className={classes.subtitle}>
                 {card.subtitle}
               </Typography>
-            </Grid>
+            </div>
           </Grid>
         ))}
       </Grid>
