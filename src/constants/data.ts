@@ -63,7 +63,7 @@ const data: IData = {
         whatIDoTitle: "What I do?",
         cards: [
           {
-            title: "Front-end Development",
+            title: "Front-end Dev",
             content:
               "I enjoy building interesting and interactive UI. Coding and web dev are two of my biggest hobbies to spend my spare time.",
             iconType: "web",
@@ -123,7 +123,7 @@ const data: IData = {
           },
           {
             title: "Gelato",
-            desc: "Mango flavour",
+            desc: "Mango Flavour",
             label: "heart",
           },
           {
@@ -133,7 +133,7 @@ const data: IData = {
           },
           {
             title: "Coffee",
-            desc: "3 per day",
+            desc: "3 / Day",
             label: "coffee",
           },
         ],

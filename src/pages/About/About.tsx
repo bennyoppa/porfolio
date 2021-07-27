@@ -25,6 +25,24 @@ const useStyles = makeStyles((theme: Theme) =>
         margin: theme.spacing(1),
       },
     },
+    title: {
+      color: "#aaaaaa",
+      [theme.breakpoints.down("sm")]: {
+        textAlign: "center",
+      },
+    },
+    name: {
+      color: "#333333",
+      [theme.breakpoints.down("sm")]: {
+        textAlign: "center",
+      },
+    },
+    bio: {
+      color: "#666666",
+      [theme.breakpoints.down("sm")]: {
+        textAlign: "center",
+      },
+    },
     cvButton: {
       marginRight: theme.spacing(2),
       borderRadius: 24,
@@ -109,19 +127,19 @@ const About = (props: any) => {
             className="about-me-section__content"
             style={{ marginTop: 20 }}
           >
-            <Typography variant="subtitle1" style={{ color: "#aaaaaa" }}>
+            <Typography variant="subtitle1" className={classes.title}>
               {title}
             </Typography>
             <Typography
               variant="h5"
-              style={{ color: "#333333" }}
+              className={classes.name}
               gutterBottom={true}
             >
               <b>{name}</b>
             </Typography>
             <Typography
               variant="body1"
-              style={{ color: "#666666" }}
+              className={classes.bio}
               paragraph={true}
             >
               {bio}
