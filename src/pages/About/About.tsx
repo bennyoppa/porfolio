@@ -43,6 +43,11 @@ const useStyles = makeStyles((theme: Theme) =>
         textAlign: "center",
       },
     },
+    buttonGroup: {
+      [theme.breakpoints.down("sm")]: {
+        paddingLeft: 26,
+      },
+    },
     cvButton: {
       marginRight: theme.spacing(2),
       borderRadius: 24,
@@ -144,21 +149,24 @@ const About = (props: any) => {
             >
               {bio}
             </Typography>
-            <Button
-              variant="outlined"
-              color="primary"
-              classes={{ root: classes.cvButton }}
-              onClick={downloadCVHandler}
-            >
-              Download CV
-            </Button>
-            <Button
-              href="mailto:benny.j.shi@gmail.com"
-              variant="outlined"
-              classes={{ root: classes.contactButton }}
-            >
-              Contact
-            </Button>
+            <div className={classes.buttonGroup}>
+              <Button
+                variant="outlined"
+                color="primary"
+                classes={{ root: classes.cvButton }}
+                onClick={downloadCVHandler}
+              >
+                Resume
+              </Button>
+
+              <Button
+                href="mailto:benny.j.shi@gmail.com"
+                variant="outlined"
+                classes={{ root: classes.contactButton }}
+              >
+                Contact
+              </Button>
+            </div>
           </Grid>
         </Grid>
       </section>
