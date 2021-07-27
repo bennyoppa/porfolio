@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
       width: 50,
       color: "#007ced",
     },
-    count: {
+    desc: {
       color: "#d5d5d5",
       margin: "0 10px",
     },
@@ -40,14 +40,14 @@ const useStyles = makeStyles((theme: Theme) =>
 interface IFunFactCard {
   card: {
     title: string;
-    count: number;
+    desc: string;
     label: string;
   };
 }
 
 export default function FunFactCard(props: IFunFactCard) {
   const classes = useStyles();
-  const { title, count, label } = props.card;
+  const { title, desc, label } = props.card;
 
   const Icon = icons.find((i) => i.label === label)?.icon;
 
@@ -63,8 +63,8 @@ export default function FunFactCard(props: IFunFactCard) {
           </Typography>
         </Grid>
         <Grid xs={12} item>
-          <Typography variant="h3" className={classes.count}>
-            {count}
+          <Typography variant="h6" className={classes.desc}>
+            {desc}
           </Typography>
         </Grid>
       </Grid>

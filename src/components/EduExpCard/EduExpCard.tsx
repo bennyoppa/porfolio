@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme: Theme) =>
     innerWrapper: {
       paddingLeft: 30,
       paddingRight: 50,
+      [theme.breakpoints.down("sm")]:{
+        padding: 5,
+      }
     },
     cardContent: {
       position: "relative",
@@ -33,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     cardYear: {
       border: "2px solid #007ced",
-      padding: "5px 0",
+      padding: "5px",
       borderRadius: 20,
       textAlign: "center",
       color: "#666666",
@@ -60,10 +63,10 @@ export default function EduExpCard(props: EduExpCardProps) {
     <div className={classes.innerWrapper}>
       <Grid container className={classes.cardContent}>
         <Grid container xs={12} className={classes.iconWrapper}>
-          <Grid item xs={12} sm={3} className={classes.cardYear}>
+          <Grid item xs={3} className={classes.cardYear}>
             <Typography variant="body1">{year}</Typography>
           </Grid>
-          <Grid item xs={12} sm={9} className={classes.cardLocation}>
+          <Grid item xs={9} className={classes.cardLocation}>
             <Typography variant="body1">{location}</Typography>
           </Grid>
         </Grid>

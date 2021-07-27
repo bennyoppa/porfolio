@@ -16,7 +16,7 @@ export interface IData {
       };
       funFacts: {
         funFactsTitle: string;
-        factCards: { title: string; count: number; label: string }[];
+        factCards: { title: string; desc: string; label: string }[];
       };
     };
     resume: {
@@ -109,7 +109,7 @@ const data: IData = {
           {
             title: "Anything",
             subtitle: "Food",
-            content: '"Truffle Fried Rce", "Mango Gelato"',
+            content: '"Truffle Fried Rce"',
           },
         ],
       },
@@ -117,23 +117,23 @@ const data: IData = {
         funFactsTitle: "Fun Facts",
         factCards: [
           {
-            title: "xxx",
-            count: 111,
-            label: "heart",
-          },
-          {
-            title: "yyy",
-            count: 222,
+            title: "Rubik's Cube",
+            desc: "60 sec",
             label: "time",
           },
           {
-            title: "zzz",
-            count: 333,
+            title: "Gelato",
+            desc: "Mango flavour",
+            label: "heart",
+          },
+          {
+            title: "Game",
+            desc: "League of Legends",
             label: "star",
           },
           {
-            title: "bbb",
-            count: 444,
+            title: "Coffee",
+            desc: "3 per day",
             label: "coffee",
           },
         ],
@@ -143,43 +143,17 @@ const data: IData = {
       heading: "Resume",
       eduExp: [
         {
-          eduExpType: "Education",
-          cards: [
-            {
-              year: "2017 - 2018",
-              location: "University of New South Wales",
-              title: "Master of IT",
-              description:
-                "Major in Artificial Intelligence & Database Management Systems; other web dev and Chat-Bot projects.",
-            },
-            {
-              year: "2011 - 2015",
-              location: "University of New South Wales",
-              title: "Bachelor of Electrical Eng",
-              description:
-                "Major in microelectronics, energy systems, control system, programming & signal processing.",
-            },
-            {
-              year: "2000",
-              location: "UNSW Global",
-              title: "Foundation Studies",
-              description:
-                "Foundation Studies is an alternative of Year 12 courses for international students.",
-            },
-          ],
-        },
-        {
           eduExpType: "Experience",
           cards: [
             {
-              year: "2021 - Now",
+              year: "2021",
               location: "Westpac",
               title: "Data Analyst",
               description:
                 "Utilised SAS programming and SQL for data analytics, BI reporting & data visualisation.",
             },
             {
-              year: "2019 - 2020",
+              year: "2020",
               location: "Telstra",
               title: "Data Analyst",
               description:
@@ -191,6 +165,32 @@ const data: IData = {
               title: "Graduate Systems Engineer",
               description:
                 "Back-end developments & system monitoring by using PHP and Linus batch scripts.",
+            },
+          ],
+        },
+        {
+          eduExpType: "Education",
+          cards: [
+            {
+              year: "2018",
+              location: "UNSW",
+              title: "Master of IT",
+              description:
+                "Major in Artificial Intelligence & Database Management Systems; other web dev and Chat-Bot projects.",
+            },
+            {
+              year: "2015",
+              location: "UNSW",
+              title: "Bachelor of Electrical Eng",
+              description:
+                "Major in microelectronics, energy systems, control system, programming & signal processing.",
+            },
+            {
+              year: "2000",
+              location: "UNSW Global",
+              title: "Foundation Studies",
+              description:
+                "Foundation Studies is an alternative of Year 12 courses for international students.",
             },
           ],
         },

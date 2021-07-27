@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     certIcon: {
-      width: 120,
+      width: "100%",
     },
     certIconWrapper: {
       padding: "5px 0",

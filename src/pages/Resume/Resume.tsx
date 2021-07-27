@@ -74,7 +74,7 @@ const Resume = (props: any) => {
       <section className={classes.eduExpSection}>
         <Grid container>
           {eduExp.map((e, i) => (
-            <Grid item xs={6} key={i}>
+            <Grid item xs={12} sm={6} key={i}>
               <Typography variant="h5" className={classes.sectionTitle}>
                 <b>{e.eduExpType}</b>
               </Typography>
@@ -98,7 +98,7 @@ const Resume = (props: any) => {
           </Grid>
           <Grid container className={classes.cardGroup}>
             {certs.certCards.map((card, i) => (
-              <Grid item xs={6} key={i}>
+              <Grid item xs={12} sm={6} key={i}>
                 <CertCard card={card} />
               </Grid>
             ))}
@@ -108,7 +108,7 @@ const Resume = (props: any) => {
       <section className={classes.skillSection}>
         <Grid container>
           {skills.map((s, i) => (
-            <Grid item xs={6} key={i}>
+            <Grid item xs={12} sm={6} key={i}>
               <Typography variant="h5" className={classes.sectionTitle}>
                 {s.type}
               </Typography>
