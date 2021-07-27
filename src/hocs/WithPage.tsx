@@ -10,8 +10,11 @@ const styles = (theme: Theme) =>
   createStyles({
     pageContainer: {
       padding: "40px 70px",
+      [theme.breakpoints.down("md")]: {
+        padding: "20px 45px",
+      },
       [theme.breakpoints.down("sm")]: {
-        padding: "20px 35px",
+        padding: 20,
       },
     },
   });

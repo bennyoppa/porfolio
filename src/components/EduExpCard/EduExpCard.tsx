@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme: Theme) =>
     innerWrapper: {
       paddingLeft: 30,
       paddingRight: 50,
-      [theme.breakpoints.down("sm")]:{
+      [theme.breakpoints.down("sm")]: {
         padding: 5,
-      }
+      },
     },
     cardContent: {
       position: "relative",
@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme: Theme) =>
       left: -30,
       top: 25,
       backgroundColor: "white",
+      [theme.breakpoints.down("sm")]: {
+        left: -10,
+      },
     },
     cardYear: {
       border: "2px solid #007ced",

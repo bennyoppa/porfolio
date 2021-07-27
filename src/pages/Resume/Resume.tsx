@@ -18,7 +18,10 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottom: "2px solid #eee",
     },
     eduExpSection: {
-      paddingTop: 70,
+      paddingTop: 20,
+    },
+    sectionTop: {
+      marginTop: 50,
     },
     sectionTitle: {
       display: "inline-block",
@@ -45,13 +48,16 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     cardGroup: {
-      paddingTop: 30,
+      marginTop: 30,
     },
     certSection: {
-      paddingTop: 70,
+      paddingTop: 40,
+    },
+    certCardTop: {
+      marginTop: 30,
     },
     skillSection: {
-      paddingTop: 70,
+      paddingTop: 20,
     },
     skillCards: {
       padding: "30px 20px 0 0",
@@ -74,7 +80,7 @@ const Resume = (props: any) => {
       <section className={classes.eduExpSection}>
         <Grid container>
           {eduExp.map((e, i) => (
-            <Grid item xs={12} sm={6} key={i}>
+            <Grid item xs={12} sm={6} key={i} className={classes.sectionTop}>
               <Typography variant="h5" className={classes.sectionTitle}>
                 <b>{e.eduExpType}</b>
               </Typography>
@@ -98,7 +104,7 @@ const Resume = (props: any) => {
           </Grid>
           <Grid container className={classes.cardGroup}>
             {certs.certCards.map((card, i) => (
-              <Grid item xs={12} sm={6} key={i}>
+              <Grid item xs={12} sm={6} key={i} className={classes.certCardTop}>
                 <CertCard card={card} />
               </Grid>
             ))}
@@ -108,7 +114,7 @@ const Resume = (props: any) => {
       <section className={classes.skillSection}>
         <Grid container>
           {skills.map((s, i) => (
-            <Grid item xs={12} sm={6} key={i}>
+            <Grid item xs={12} sm={6} key={i} className={classes.sectionTop}>
               <Typography variant="h5" className={classes.sectionTitle}>
                 {s.type}
               </Typography>

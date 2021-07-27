@@ -23,11 +23,15 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "100%",
     },
     certIconWrapper: {
-      padding: "5px 0",
+      padding: "20px 0",
       backgroundColor: "#f5f5f5",
       textAlign: "center",
       borderTopLeftRadius: 10,
       borderBottomLeftRadius: 10,
+      [theme.breakpoints.down("sm")]: {
+        padding: "61px 0",
+        alignSelf: "center",
+      },
     },
     cardInfo: {
       padding: "20px 0 20px 20px",

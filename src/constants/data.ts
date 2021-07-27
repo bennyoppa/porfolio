@@ -57,33 +57,33 @@ const data: IData = {
       aboutMeSection: {
         title: "Front-end Developer",
         name: "Ben Shi",
-        bio: "Hi, I'm a new and passionate front-end developer.",
+        bio: "Hi, I'm a passionate Front-end Developer & Data Analyst.",
       },
       whatIDoSection: {
         whatIDoTitle: "What I do?",
         cards: [
           {
-            title: "Title1",
+            title: "Front-end Development",
             content:
-              "xxxxxxxxxx xxxxxxxxx xxxxxxxxxxxx xxxxxxxxx xxxxxxxx xxxxxxxxxxx xxxxx xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxx",
-            iconType: "create",
-          },
-          {
-            title: "Title2",
-            content:
-              "xxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxx",
-            iconType: "store",
-          },
-          {
-            title: "Title3",
-            content:
-              "xxxxxxxxxxxxx xxxxxxxxxxxxx xxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxx",
+              "I enjoy building interesting and interactive UI. Coding and web dev are two of my biggest hobbies to spend my spare time.",
             iconType: "web",
           },
           {
-            title: "Title4",
+            title: "Data Analytics",
             content:
-              "xxxxxxxx xxxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxxxxxxx xxxxxx xxxxxx xxxxxxxxxxx xxxxxxxxxx xxxxxxxxxxxxxxx",
+              "I'm a full-time Data Analyst specialising in data modelling, data warehouse, visualisation and cloud services. I also build predictive models with Python libraries in my side projects.",
+            iconType: "store",
+          },
+          {
+            title: "Marvel Fan",
+            content:
+              "I'm a huge fan of Marvel movies and TV series. Infinity War and Endgame are my favourites, and I've watched them more than 5 times.",
+            iconType: "web",
+          },
+          {
+            title: "Food Addict",
+            content:
+              "I cannot resist delicous food! Once lockdown is over, I'll start my hunting again.",
             iconType: "business",
           },
         ],

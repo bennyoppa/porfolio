@@ -62,7 +62,10 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingTop: 50,
     },
     cards: {
-      paddingTop: 20,
+      paddingTop: 10,
+    },
+    card: {
+      marginTop: 10,
     },
     carousel: {
       overflow: "hidden",
@@ -104,6 +107,7 @@ const About = (props: any) => {
             sm={6}
             lg={7}
             className="about-me-section__content"
+            style={{ marginTop: 20 }}
           >
             <Typography variant="subtitle1" style={{ color: "#aaaaaa" }}>
               {title}
@@ -149,7 +153,7 @@ const About = (props: any) => {
           </Grid>
           <Grid container className={classes.cards}>
             {cards.map((card, i) => (
-              <Grid item key={i} xs={12} sm={6}>
+              <Grid item key={i} xs={12} sm={6} className={classes.card}>
                 <IconCard
                   title={card.title}
                   content={card.content}

@@ -15,7 +15,7 @@ const styles = (theme: Theme) =>
       color: "#007ced",
     },
     cardContent: {
-      wordBreak: "break-all",
+      // wordBreak: "break-all",
       paddingRight: 15,
     },
   });
