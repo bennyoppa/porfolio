@@ -65,7 +65,7 @@ export default function EduExpCard(props: EduExpCardProps) {
   return (
     <div className={classes.innerWrapper}>
       <Grid container className={classes.cardContent}>
-        <Grid container xs={12} className={classes.iconWrapper}>
+        <Grid container className={classes.iconWrapper}>
           <Grid item xs={3} className={classes.cardYear}>
             <Typography variant="body1">{year}</Typography>
           </Grid>
