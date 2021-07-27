@@ -11,7 +11,7 @@ import IconCard from "../../components/IconCard/IconCard";
 import CardCarousel from "../../components/CardCarousel/CardCarousel";
 import FunFactCard from "../../components/FunFactCard/FunFactCard";
 
-import catLogo from "../../assets/images/cat.jpeg";
+import meLogo from "../../assets/images/me.jpeg";
 import CV from "../../assets/pdfs/Resume_Ben_Jianhui_Shi.pdf";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -122,7 +122,7 @@ const About = (props: any) => {
           spacing={2}
         >
           <Grid item xs={12} sm={6} lg={5} className="intro-section__avatar">
-            <Avatar className={classes.avatar} alt="Me" src={catLogo} />
+            <Avatar className={classes.avatar} alt="Me" src={meLogo} />
           </Grid>
           <Grid
             item
