@@ -1,3 +1,8 @@
+import IronMan from "../assets/images/iron_man.jpeg";
+import KobeBryant from "../assets/images/kobe_bryant.jpeg";
+import BlackPink from "../assets/images/blackpink.jpg";
+import Sushi from "../assets/images/sushi.jpg";
+
 export interface IData {
   pages: {
     about: {
@@ -12,7 +17,12 @@ export interface IData {
       };
       favourites: {
         favouritesTitle: string;
-        imageCards: { title: string; subtitle: string; content: string }[];
+        imageCards: {
+          title: string;
+          subtitle: string;
+          content: string;
+          background: string;
+        }[];
       };
       funFacts: {
         funFactsTitle: string;
@@ -106,21 +116,25 @@ const data: IData = {
             title: "Avengers 4: Endgame",
             subtitle: "Movie",
             content: '"I am IRON MAN!"',
+            background: IronMan,
           },
           {
             title: "Basketball",
             subtitle: "Sport",
             content: "Kobe Bryant - The Legend",
+            background: KobeBryant,
           },
           {
             title: "K-Pop",
             subtitle: "Music",
             content: '"Pretty Savage" by Black Pink',
+            background: BlackPink,
           },
           {
             title: "Anything",
             subtitle: "Food",
             content: '"Truffle Fried Rce", "Sushi"',
+            background: Sushi,
           },
         ],
       },

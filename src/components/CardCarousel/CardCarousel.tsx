@@ -16,7 +16,7 @@ const useStyles = makeStyles(() =>
     },
     imageCardContent: {
       position: "relative",
-      padding: "30px 20px 20px 60px",
+      padding: "0 0 0 60px",
       backgroundColor: "#fff",
       borderRadius: 8,
       border: "2px solid #e5e5e5",
@@ -42,6 +42,22 @@ const useStyles = makeStyles(() =>
       padding: 20,
       flexShrink: 0,
     },
+    textSection: {
+      padding: "30px 0",
+    },
+    background: {
+      backgroundSize: "cover",
+      position: "relative",
+      "&:after": {
+        content: '""',
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: `linear-gradient(270deg, transparent 80%, white 100%)`,
+      },
+    },
   })
 );
 
@@ -50,6 +66,7 @@ interface ICardCarousel {
     title: string;
     content: string;
     subtitle: string;
+    background: string;
   }[];
 }
 
@@ -101,15 +118,27 @@ export default function CardCarousel(props: ICardCarousel) {
               <div className={classes.iconWrapper}>
                 <Icon label={card.subtitle} />
               </div>
-              <Typography variant="body1" className={classes.content}>
-                {card.content}
-              </Typography>
-              <Typography variant="subtitle1" className={classes.title}>
-                <b>{card.title}</b>
-              </Typography>
-              <Typography variant="subtitle2" className={classes.subtitle}>
-                {card.subtitle}
-              </Typography>
+              <Grid container>
+                <Grid item xs={12} lg={4} className={classes.textSection}>
+                  <Typography variant="body1" className={classes.content}>
+                    {card.content}
+                  </Typography>
+                  <Typography variant="subtitle1" className={classes.title}>
+                    <b>{card.title}</b>
+                  </Typography>
+                  <Typography variant="subtitle2" className={classes.subtitle}>
+                    {card.subtitle}
+                  </Typography>
+                </Grid>
+                <Grid
+                  item
+                  lg={8}
+                  className={classes.background}
+                  style={{
+                    backgroundImage: `url(${card.background})`,
+                  }}
+                ></Grid>
+              </Grid>
             </div>
           </Grid>
         ))}
