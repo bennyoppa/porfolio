@@ -47,6 +47,7 @@ const useStyles = makeStyles(() =>
     },
     background: {
       backgroundSize: "cover",
+      backgroundPosition: "center",
       position: "relative",
       "&:after": {
         content: '""',
